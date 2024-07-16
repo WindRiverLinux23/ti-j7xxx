@@ -16,7 +16,7 @@ do_install:append:ti-j7() {
 FILES:${PN}-pvdec-full-bin:ti-j7 = "\
         ${nonarch_base_libdir}/firmware/${TARGET} \
 "
-FILES:${PN}-wave521c_codec_fw:ti-j7 = "\
+FILES:${PN}-wave521c-codec-fw:ti-j7 = "\
         ${nonarch_base_libdir}/firmware/wave521c_codec_fw.bin \
 "
 
@@ -57,7 +57,7 @@ RDEPENDS:${PN}-cadence:ti-j7 += "${PN}-cadence-license"
 LICENSE:${PN}-cadence:ti-j7       	= "Firmware-cadence"
 LICENSE:${PN}-cadence-license:ti-j7  = "Firmware-cadence"
 
-RDEPENDS:${PN}-cnm:ti-j7 += "${PN}-cnm-licence ${PN}-wave521c_codec_fw"
+RDEPENDS:${PN}-cnm:ti-j7 += "${PN}-cnm-licence ${PN}-wave521c-codec-fw"
 LICENCE:${PN}-cnm:ti-j7             = "Firmware-cnm"
 LICENCE:${PN}-cnm-licence:ti-j7  = "Firmware-cnm"
 
@@ -67,5 +67,5 @@ PACKAGES:prepend:ti-j7 = "\
 	${PN}-pvdec-full-bin \
 	${PN}-cnm \
 	${PN}-cnm-licence \
-	${PN}-wave521c_codec_fw \
+	${PN}-wave521c-codec-fw \
 	"
